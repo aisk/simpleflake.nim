@@ -5,7 +5,6 @@ import times
 const SIMPLEFLAKE_EPOCH = 946702800
 const SIMPLEFLAKE_RANDOM_LENGTH = 23
 
-random.randomize()
 let now = times.getTime()
 var rand = random.initRand(now.toUnix * 1_000_000_000 + now.nanosecond)
 
