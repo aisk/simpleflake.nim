@@ -11,9 +11,8 @@ var rand = random.initRand(now.toUnix * 1_000_000_000 + now.nanosecond)
 
 proc gen*(): uint64 =
   let now = times.getTime().toUnixFloat()
-  var ts = uint64((now - SIMPLEFLAKE_EPOCH) * 1000)
+  let ts = uint64((now - SIMPLEFLAKE_EPOCH) * 1000)
   let randomBits = uint64(rand.rand(2 ^ SIMPLEFLAKE_RANDOM_LENGTH))
-
   return ts shl SIMPLEFLAKE_RANDOM_LENGTH or randomBits
 
 proc parse*(flake: uint64): tuple[timestamp: float, randomBits: uint64] =
