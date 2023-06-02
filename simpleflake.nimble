@@ -1,7 +1,7 @@
 # Package
 
-version       = "0.1.1"
-author        = "An Long"
+version       = "0.2.0"
+author        = "AN Long"
 description   = "Simpleflake for nim"
 license       = "MIT"
 srcDir        = "src"
